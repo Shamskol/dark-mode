@@ -1,7 +1,10 @@
 import React from "react";
 import Chart from "./Chart";
 
-const Charts = ({ coinData }) => {
+// const Charts = ({ coinData }) => {
+  function Charts({ coinData }){
+    // const coinData = props.coinData;
+    // const {coinData}= props
   return (
     <div className="charts">
       {coinData.map(coin => (
