@@ -6,10 +6,12 @@ export const useLocalStorage = (key, initialValue) => {
     return item ? JSON.parse(item) : initialValue;
   });
 
-  return [storedValue];
-};
+  
+
   const setValue = value => {
     setstoredValue(value);
     window.localStorage.setItem(key, stringify(value));
   };
+  return [storedValue, setValue];
 
+};
