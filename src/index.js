@@ -7,8 +7,16 @@ import Navbar from "./components/Navbar";
 
 import "./styles.scss";
 
+
 const App = () => {
   const [coinData, setCoinData] = useState([]);
+//   const [darkMode, setDarkMode] = useLocalStorage(false);
+//   const toggleMode = e => {
+//     e.preventDefault();
+//     setDarkMode(!darkMode);
+//   };
+// useDarkMode(darkMode)
+
 
   useEffect(() => {
     axios
@@ -21,6 +29,8 @@ const App = () => {
   return (
     <div className="App">
       <Navbar />
+      
+      
       <Charts coinData={coinData} />
     </div>
   );
